@@ -1,14 +1,13 @@
-// Define the Teacher interface
+
 interface Teacher {
-  readonly firstName: string;        // readonly → can only be set at initialization
-  readonly lastName: string;         // readonly → can only be set at initialization
-  fullTimeEmployee: boolean;         // must always be defined
-  yearsOfExperience?: number;        // optional
-  location: string;                  // must always be defined
-  [key: string]: any;                // allows extra attributes like "contract"
+  readonly firstName: string;
+  readonly lastName: string;
+  fullTimeEmployee: boolean;
+  yearsOfExperience?: number;
+  location: string;
+  [key: string]: any;
 }
 
-// Example usage
 const teacher3: Teacher = {
   firstName: "John",
   lastName: "Doe",
@@ -18,4 +17,3 @@ const teacher3: Teacher = {
 };
 
 console.log(teacher3);
-S
