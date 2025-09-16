@@ -72,7 +72,6 @@ export function executeWork(employee: Director | Teacher): string {
 console.log(executeWork(createEmployee(200)));   // Getting to work
 console.log(executeWork(createEmployee(1000)));  // Getting to director t
 
-// task_2/js/main.ts
 
 // Director interface
 interface DirectorInterface {
@@ -146,15 +145,9 @@ export function executeWork(employee: Director | Teacher): string {
 export type Subjects = "Math" | "History";
 
 // Function teachClass
-export function teachClass(todayClass: Subjects): string {
+export function teachClass(todayClass:Subjects): string {
   if (todayClass === "Math") {
     return "Teaching Math";
   }
   return "Teaching History";
 }
-
-// Testing
-console.log(executeWork(createEmployee(200)));    // Getting to work
-console.log(executeWork(createEmployee(1000)));   // Getting to director tasks
-console.log(teachClass("Math"));                  // Teaching Math
-console.log(teachClass("History"));               // Teaching History
