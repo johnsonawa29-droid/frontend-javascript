@@ -70,7 +70,7 @@ export function executeWork(employee: Director | Teacher): string {
 
 // Testing
 console.log(executeWork(createEmployee(200)));   // Getting to work
-console.log(executeWork(createEmployee(1000)));  // Getting to director tasks
+console.log(executeWork(createEmployee(1000)));  // Getting to director t
 
 // task_2/js/main.ts
 
