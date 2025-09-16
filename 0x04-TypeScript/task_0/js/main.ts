@@ -1,9 +1,12 @@
+
+
 interface Student {
   firstName: string;
   lastName: string;
   age: number;
   location: string;
 }
+
 const student1: Student = {
   firstName: "Alice",
   lastName: "Johnson",
@@ -18,24 +21,25 @@ const student2: Student = {
   location: "Abuja",
 };
 
-const studentsList: Student[] = [student1, student2]:
+const studentsList: Student[] = [student1, student2];
 
-const teacher3: Teacher = {
-  firstName: "John",
-  lastName: "Doe",
-  fullTimeEmployee: false,
-  location: "London",
-  contract: false,
-};
+// ✅ VanillaJS table creation
+const table = document.createElement("table");
+const tbody = document.createElement("tbody");
 
-console.log(teacher3);
+studentsList.forEach((student) => {
+  const row = document.createElement("tr");
 
-interface Teacher {
-  readonly firstName: string;   // only set during initialization
-  readonly lastName: string;    // only set during initialization
-  fullTimeEmployee: boolean;    // must always be defined
-  yearsOfExperience?: number;   // optional
-  location: string;             // must always be defined
-  [key: string]: any;           // allow extra properties like contract
-}
+  const nameCell = document.createElement("td");
+  nameCell.textContent = student.firstName;
 
+  const locationCell = document.createElement("td");
+  locationCell.textContent = student.location;
+
+  row.appendChild(nameCell);
+  row.appendChild(locationCell);
+  tbody.appendChild(row);
+});
+
+table.appendChild(tbody);
+document.body.appendChild(table); // 
