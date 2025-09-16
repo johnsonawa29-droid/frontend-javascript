@@ -73,6 +73,9 @@ console.log(executeWork(createEmployee(200)));   // Getting to work
 console.log(executeWork(createEmployee(1000)));  // Getting to director t
 
 
+
+// task_2/js/main.ts
+
 // Director interface
 interface DirectorInterface {
   workFromHome(): string;
