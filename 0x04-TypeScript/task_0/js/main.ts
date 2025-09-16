@@ -29,3 +29,13 @@ const teacher3: Teacher = {
 };
 
 console.log(teacher3);
+
+interface Teacher {
+  readonly firstName: string;   // only set during initialization
+  readonly lastName: string;    // only set during initialization
+  fullTimeEmployee: boolean;    // must always be defined
+  yearsOfExperience?: number;   // optional
+  location: string;             // must always be defined
+  [key: string]: any;           // allow extra properties like contract
+}
+
